@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 import { log } from "console";
 import ffmpeg from "fluent-ffmpeg";
 
-dotenv.config({ path: "../.env" });
+// dotenv.config({ path: "../.env" });
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -20,6 +21,8 @@ app.post("/process-video", (req, res) => {
 
   // Check if the input file path is defined
   if (!inputFilePath || !outputFilePath) {
+    log(inputFilePath)
+    log(outputFilePath)
     return res.status(400).send("Bad Request: Missing File Path");
   }
 
