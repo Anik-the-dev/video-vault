@@ -6,8 +6,8 @@ import { log } from "console";
 // https://cloud.google.com/storage/docs/reference/libraries#client-libraries-usage-nodejs
 const storage = new Storage();
 
-const rawVideoBucketName = "raw-videos-bucket";
-const processedVideoBucketName = "processed-videos-bucket";
+const rawVideoBucketName = "raw-videos-bucket-12323";  // Must be unique globally
+const processedVideoBucketName = "processed-videos-bucket-12323"; // Must be unique globally
 
 const localRawVideoPath = "./raw-videos";
 const localProcessedVideoPath = "./processed-videos";
